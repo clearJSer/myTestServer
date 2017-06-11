@@ -1,0 +1,22 @@
+短信接口：
+  phone ：要发送的手机号  //必须传
+  msg_user：短信平台用户名　//  不传会默认使用我的账号  我只有50条短信额度~~~~(>_<)~~~~     正常业务场景这个值不用传 测试时传上该值
+  msg_password : 短信平台秘钥   // 不传会默认使用我的账号  我只有50条短信额度           正常业务场景这个值不用传
+例如：http://redlemon.applinzi.com/sendMsg?phone=185222223654&msg_user=xxxxx&msg_password=xxxxxxxxx
+    返回值：  4位数的 短信验证码(成功)   错误提示信息（失败）
+
+
+注册接口接口：
+  username 用户名
+  password 密码
+  phone 手机号
+  email 邮箱
+例如:http://redlemon.applinzi.com/register?username=123&password=123123&phone=110&email=12321
+  返回值 0 该用户已存在  1 注册成功  2注册失败
+
+
+登录接口：
+  phone 手机号
+  password  密码
+例如：http://redlemon.applinzi.com/login?password=123123&phone=110
+ 返回值：0 该用户不存在  1 登录成功  2 密码错误
